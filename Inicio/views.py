@@ -42,7 +42,7 @@ def register(request):
         else:
             return render(request, 'form_register.html',{'form':CustomUserCreationForm , 'error':'Las contraseñas no coinciden.'})
 
-@login_required(login_url='/')
+
 def users_view(request):
     data_users = User.objects.order_by('id')
     return render(request, 'users.html',{'users':data_users})
