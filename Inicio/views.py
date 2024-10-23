@@ -27,7 +27,7 @@ def salir(request):
     logout(request)
     return redirect('/')
 
-@login_required(login_url='/')
+
 def register(request):
     if request.method == 'GET':
         return render(request, 'form_register.html',{'form':CustomUserCreationForm})
